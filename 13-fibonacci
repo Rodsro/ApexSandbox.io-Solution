@@ -11,5 +11,5 @@ public Integer fibonacci(Integer n) {
         proximo += anterior;
         anterior = atual;
     }
-    return atual;
+    return proximo;
 }
