@@ -1,15 +1,19 @@
 public Integer fibonacci(Integer n) {
     
-    if (n == 1 || n == 2) {
-        return 1;
-    }
     Integer ultimo = 1;
     Integer atual = 1;
     Integer temporario;
-    for (Integer i = 3; i <= n; i++) {
+
+    if (n == 1 || n == 2) {
+        return atual = 1;
+    } else{
+        for (Integer i = 3; i <= n; i++) {
         temporario = atual;
         atual += ultimo;
         ultimo = temporario;
+        }
+        return atual;
     }
-    return atual;
+    
+    
 }
