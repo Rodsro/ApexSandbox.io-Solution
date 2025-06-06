@@ -1,0 +1,7 @@
+public Boolean isTypeAccount(sObject record){
+    if (record.Id.startswith('001')){
+        return true;
+    } else {
+        return false;
+    }
+}
