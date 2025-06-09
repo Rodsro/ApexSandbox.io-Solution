@@ -16,5 +16,7 @@ public String registerStudent(String name, String phone, String email) {
 
     student.apxio__Registration_Number__c = novoNumRegistro;
 
+    insert student;
+
     return student.apxio__Registration_Number__c;
 }
