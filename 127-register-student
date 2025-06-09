@@ -8,8 +8,13 @@ public String registerStudent(String name, String phone, String email) {
 
     insert student;
 
-    List<apxio__Student__c> students = [SELECT Id, apxio__Registration_Number__c FROM apxio__Student__c ORDER BY apxio__Registration_Number__c DESC LIMIT 1];
+    apxio__Student__c insertedStudent = [SELECT 
+                                            Id, 
+                                            apxio__Registration_Number__c 
+                                        FROM apxio__Student__c 
+                                        ORDER BY apxio__Registration_Number__c 
+                                        DESC LIMIT 1];
     
 
-    return String.valueOf(student.apxio__Registration_Number__c);
+    return String.valueOf(insertedStudent);
 }
