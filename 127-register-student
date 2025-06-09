@@ -1,6 +1,4 @@
 public String registerStudent(String name, String phone, String email) {
-
-    Integer apxio__Registration_Number__c;
     
     apxio__Student__c student = new apxio__Student__c();
 
@@ -8,14 +6,8 @@ public String registerStudent(String name, String phone, String email) {
     student.apxio__Email__c = email;
     student.apxio__Phone__c = phone;
 
-    List<apxio__Student__c> students = [SELECT Id, apxio__Registration_Number__c FROM apxio__Student__c ORDER BY apxio__Registration_Number__c DESC LIMIT 10];
+    List<apxio__Student__c> students = [SELECT Id, apxio__Registration_Number__c FROM apxio__Student__c ORDER BY apxio__Registration_Number__c DESC LIMIT 1];
     
-    Integer numResgistroAtual = students[0].apxio__Registration_Number__c;
-
-    Integer novoNumRegistro = numResgistroAtual + 1;
-
-    student.apxio__Registration_Number__c = novoNumRegistro;
-
     insert student;
 
     return student.apxio__Registration_Number__c;
