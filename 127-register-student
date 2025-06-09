@@ -6,9 +6,10 @@ public String registerStudent(String name, String phone, String email) {
     student.apxio__Email__c = email;
     student.apxio__Phone__c = phone;
 
+    insert student;
+
     List<apxio__Student__c> students = [SELECT Id, apxio__Registration_Number__c FROM apxio__Student__c ORDER BY apxio__Registration_Number__c DESC LIMIT 1];
     
-    insert student;
 
     return String.valueOf(student.apxio__Registration_Number__c);
 }
