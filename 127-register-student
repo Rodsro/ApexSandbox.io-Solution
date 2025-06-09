@@ -12,9 +12,9 @@ public String registerStudent(String name, String phone, String email) {
                                             Id, 
                                             apxio__Registration_Number__c 
                                         FROM apxio__Student__c 
-                                        ORDER BY apxio__Registration_Number__c 
-                                        DESC LIMIT 1];
+                                        WHERE Id = : student.Id 
+                                        LIMIT 1];
     
 
-    return String.valueOf(insertedStudent);
+    return String.valueOf(insertedStudent.apxio__Registration_Number__c);
 }
