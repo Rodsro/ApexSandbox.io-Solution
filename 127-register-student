@@ -10,5 +10,5 @@ public String registerStudent(String name, String phone, String email) {
     
     insert student;
 
-    return student.apxio__Registration_Number__c;
+    return student.apxio__Registration_Number__c.toString();
 }
