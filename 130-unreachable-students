@@ -5,6 +5,6 @@ return [SELECT Id, Name
         WHERE apxio__Phone__c = null 
         AND apxio__Email__c = null 
         AND apxio__Active__c = true
-        ORDER BY Name ASC)];
+        ORDER BY Name ASC];
 
 }
